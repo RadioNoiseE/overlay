@@ -29,7 +29,6 @@ DEPEND="
 "
 
 src_install() {
-	emake ${PN}
 	dobin ${PN}
 	doman ${PN}.1
 }

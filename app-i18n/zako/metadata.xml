@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>rne.kou@icloud.com</email>
+    <name>Huang Jing</name>
+  </maintainer>
+  <longdescription lang="en">
+    Minimal and performant Cangjie input method implementation for
+    Wayland compositors with an optimized double-array trie.
+  </longdescription>
+  <upstream>
+    <maintainer status="active">
+      <email>rne.kou@icloud.com</email>
+      <name>Huang Jing</name>
+    </maintainer>
+    <changelog>https://github.com/RadioNoiseE/zako/releases</changelog>
+    <bugs-to>https://github.com/RadioNoiseE/zako/issues</bugs-to>
+    <remote-id type="github">RadioNoiseE/zako</remote-id>
+  </upstream>
+</pkgmetadata>

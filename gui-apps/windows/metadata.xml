@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>rne.kou@icloud.com</email>
+    <name>Huang Jing</name>
+  </maintainer>
+  <longdescription lang="en">
+    An exposé-style overview tool for selecting windows to operate on in
+    Wayland compositors.
+
+    The program presents snapshots of all foreign toplevels (aka,
+    windows) on a chosen output, allows keyboard navigation, and prints
+    the selected toplevel handle identifier to standard output.
+  </longdescription>
+  <upstream>
+    <maintainer status="active">
+      <email>rne.kou@icloud.com</email>
+      <name>Huang Jing</name>
+    </maintainer>
+    <changelog>https://github.com/RadioNoiseE/windows/releases</changelog>
+    <bugs-to>https://github.com/RadioNoiseE/windows/issues</bugs-to>
+    <remote-id type="github">RadioNoiseE/windows</remote-id>
+  </upstream>
+</pkgmetadata>

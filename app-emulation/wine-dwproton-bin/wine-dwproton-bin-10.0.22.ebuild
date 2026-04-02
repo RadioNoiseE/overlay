@@ -35,7 +35,7 @@ src_install() {
 	python_setup
 	python_fix_shebang proton
 
-	# avoid doins; this tree contains many executables
+	dodir /opt
 	cp -r ../${P} "${ED}/opt" || die
 
 	sed s/'${P}'/${P}/ "${FILESDIR}/dwproton" > "${T}/dwproton" || die

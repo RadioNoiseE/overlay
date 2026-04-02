@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>rne.kou@icloud.com</email>
+    <name>Huang Jing</name>
+  </maintainer>
+  <longdescription lang="en">
+    Dawn Winery's custom Proton fork, based on Proton-CachyOS, featuring
+    the latest fixes for anime titles, compatibility improvements from
+    Proton-EM, and quality-of-life enhancements such as dxvk-gplasync
+    and additional useful environment variables.
+  </longdescription>
+  <upstream>
+    <maintainer status="active">
+      <name>The Dawn Winery</name>
+    </maintainer>
+    <changelog>https://dawn.wine/dawn-winery/dwproton/releases</changelog>
+    <bugs-to>https://dawn.wine/dawn-winery/dwproton/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

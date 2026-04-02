@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+env PROTON_USE_WOW64=1 \
+    STEAM_COMPAT_DATA_PATH=$HOME/.dwproton \
+    STEAM_COMPAT_CLIENT_INSTALL_PATH=/nonesuch \
+    WINE_CANONICAL_HOLE=skip_volatile_check \
+    /opt/${P}/proton "$@"

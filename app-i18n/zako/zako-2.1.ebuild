@@ -14,9 +14,7 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
-BDEPEND="
-	dev-util/wayland-scanner
-"
+BDEPEND="dev-util/wayland-scanner"
 
 RDEPEND="
 	dev-libs/wayland
@@ -28,8 +26,8 @@ DEPEND="${RDEPEND}"
 src_compile() {
 	local x
 	for x in wayland/*.xml; do
-		wayland-scanner client-header "${x}" "$(basename "${x}" .xml).h"
-		wayland-scanner private-code "${x}" "$(basename "${x}" .xml).c"
+		wayland-scanner client-header ${x} $(basename ${x} .xml).h
+		wayland-scanner private-code ${x} $(basename ${x} .xml).c
 	done
 
 	edo $(tc-getCC) ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o ${PN} \

@@ -8,7 +8,7 @@ inherit python-r1
 
 WINE_PN="dwproton"
 WINE_PV=$(ver_rs 2 -)
-WINE_P="${WINE_PN}-${WINE_PV}"
+WINE_P=${WINE_PN}-${WINE_PV}
 
 DESCRIPTION="Proton builds with the latest Dawn Winery fixes"
 HOMEPAGE="https://dawn.wine/dawn-winery/dwproton"

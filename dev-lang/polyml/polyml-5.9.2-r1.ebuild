@@ -30,7 +30,7 @@ RANLIB="ranlib"
 
 pkg_pretend() {
 	if has usersandbox ${FEATURES}; then
-		die "Poly/ML is incompatible with the usersandbox feature."
+		die "Poly/ML is incompatible with the usersandbox feature"
 	fi
 }
 

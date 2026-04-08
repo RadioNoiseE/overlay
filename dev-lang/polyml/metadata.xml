@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>rne.kou@icloud.com</email>
+    <name>Huang Jing</name>
+  </maintainer>
+  <maintainer type="project">
+	<email>ml@gentoo.org</email>
+	<name>ML</name>
+  </maintainer>
+  <longdescription lang="en">
+    The Poly/ML implementation of Standard ML features full
+    multiprocessor support in the thread library and garbage collector,
+    an interactive debugger, a fast compiler. It is the preferred
+    implementation for large projects including Isabelle and HOL4.
+  </longdescription>
+  <use>
+    <flag name="gmp">Use the GNU multiple precision arithmetic library
+    for integer operations</flag>
+	<flag name="portable">Build the portable interpreter version of
+	Poly/ML instead of native</flag>
+  </use>
+  <upstream>
+    <maintainer status="active">
+      <name>David Matthews</name>
+    </maintainer>
+    <changelog>https://github.com/polyml/polyml/releases</changelog>
+    <bugs-to>https://github.com/polyml/polyml/issues</bugs-to>
+	<remote-id type="github">polyml/polyml</remote-id>
+  </upstream>
+</pkgmetadata>

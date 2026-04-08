@@ -14,7 +14,6 @@ LICENSE="LGPL-2.1"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~arm64"
 IUSE="+gmp portable"
-RESTRICT="usersandbox"
 
 RDEPEND="
 	gmp? ( >=dev-libs/gmp-5:= )

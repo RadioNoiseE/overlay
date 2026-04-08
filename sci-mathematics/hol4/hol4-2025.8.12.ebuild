@@ -56,9 +56,7 @@ src_install() {
 	cd "${ED}/opt/${P}" || die
 	poly --script tools/smart-configure.sml || die
 	bin/build --relocbuild || die
-
-	scanelf -yBR -E 3 -F '%F' "${ED}/opt/${P}" | \
-		xargs patchelf --set-soname "libhol4.so"
+	scanelf -yBR -E 3 -F '%p' . | xargs patchelf --set-soname "libhol4.so" || die
 
 	newenvd - 60${P} <<-EOF
 		PATH="${EPREFIX}/opt/${P}/bin"

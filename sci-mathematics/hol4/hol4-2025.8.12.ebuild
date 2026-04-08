@@ -50,15 +50,16 @@ src_compile() {
 }
 
 src_install() {
-	dodir /opt
-	cp -r ../${P} "${ED}/opt" || die
+	mkdir "${EPREFIX}/opt"
+	cp -r ../${P} "${EPREFIX}/opt" || die
 
-	cd "${ED}/opt/${P}" || die
+	cd "${EPREFIX}/opt/${P}" || die
 	poly --script tools/smart-configure.sml || die
 	bin/build --relocbuild || die
 	scanelf -yBR -E 3 -F '%F' . | xargs patchelf --set-soname "libhol4.so" || die
 
-	newenvd - 60${P} <<-EOF
-		PATH="${EPREFIX}/opt/${P}/bin"
-	EOF
+	dodir /opt
+	mv "${EPREFIX}/opt/${P}" "${ED}/opt"
+
+	newenvd - 60${P} "PATH=\"${EPREFIX}/opt/${P}/bin\""
 }

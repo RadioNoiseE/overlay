@@ -50,7 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	mkdir "${EPREFIX}/opt"
+	mkdir "${EPREFIX}/opt" || die
 	cp -r ../${P} "${EPREFIX}/opt" || die
 
 	cd "${EPREFIX}/opt/${P}" || die
@@ -59,7 +59,7 @@ src_install() {
 	scanelf -yBR -E 3 -F '%F' . | xargs patchelf --set-soname "libhol4.so" || die
 
 	dodir /opt
-	mv "${EPREFIX}/opt/${P}" "${ED}/opt"
+	mv "${EPREFIX}/opt/${P}" "${ED}/opt" || die
 
 	echo "PATH=${EPREFIX}/opt/${P}/bin" | newenvd - 60${P}
 }

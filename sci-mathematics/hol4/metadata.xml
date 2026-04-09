@@ -27,6 +27,6 @@
     </maintainer>
     <changelog>https://github.com/HOL-Theorem-Prover/HOL/releases</changelog>
     <bugs-to>https://github.com/HOL-Theorem-Prover/HOL/issues</bugs-to>
-	<remote-id type="github">HOL-Theorem-Prover/HOL</remote-id>
+    <remote-id type="github">HOL-Theorem-Prover/HOL</remote-id>
   </upstream>
 </pkgmetadata>

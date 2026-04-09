@@ -61,5 +61,5 @@ src_install() {
 	dodir /opt
 	mv "${EPREFIX}/opt/${P}" "${ED}/opt"
 
-	newenvd - 60${P} "PATH=\"${EPREFIX}/opt/${P}/bin\""
+	echo "PATH=${EPREFIX}/opt/${P}/bin" | newenvd - 60${P}
 }

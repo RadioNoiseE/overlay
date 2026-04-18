@@ -3,6 +3,8 @@
 
 EAPI=9
 
+inherit toolchain-funcs
+
 DESCRIPTION="Window overview and selection for Wayland compositors"
 HOMEPAGE="https://github.com/RadioNoiseE/windows"
 
@@ -27,6 +29,10 @@ DEPEND="
 	${RDEPEND}
 	>=dev-libs/wayland-protocols-1.37
 "
+
+src_compile() {
+	emake CC=$(tc-getCC)
+}
 
 src_install() {
 	dobin ${PN}

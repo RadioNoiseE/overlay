@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>rne.kou@icloud.com</email>
+    <name>Huang Jing</name>
+  </maintainer>
+  <maintainer type="person">
+    <email>contact@hacktivis.me</email>
+    <name>Haelwenn (lanodan) Monnier</name>
+  </maintainer>
+  <longdescription>
+    Day/night gamma adjustments for Wayland compositors supporting
+    wlr-gamma-control-unstable-v1.
+  </longdescription>
+  <upstream>
+    <maintainer status="active">
+      <email>contact@kl.wtf</email>
+      <name>Kenny Levinsen</name>
+    </maintainer>
+    <changelog>https://git.sr.ht/~kennylevinsen/wlsunset/log</changelog>
+    <remote-id type="sourcehut">~kennylevinsen/wlsunset</remote-id>
+  </upstream>
+</pkgmetadata>

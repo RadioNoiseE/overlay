@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>rne.kou@icloud.com</email>
+    <name>Huang Jing</name>
+  </maintainer>
+  <longdescription lang="en">
+    Xray-core is a high-performance, open-source network proxy platform
+    developed by Project X. It supports multiple protocols and advanced
+    transport technologies such as VMESS, VLESS, REALITY, and XHTTP.
+
+    Xray-core is designed for secure, flexible, and censorship-resistant
+    networking, providing a powerful foundation for proxy servers,
+    privacy-focused applications, and custom network routing solutions.
+  </longdescription>
+  <upstream>
+    <maintainer status="active">
+      <name>Projext X</name>
+    </maintainer>
+    <changelog>https://github.com/XTLS/Xray-core/releases</changelog>
+    <bugs-to>https://github.com/XTLS/Xray-core/issues</bugs-to>
+    <remote-id type="github">XTLS/Xray-core</remote-id>
+  </upstream>
+</pkgmetadata>

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit autotools flag-o-matic
+inherit autotools dot-a
 
 DESCRIPTION="Poly/ML is a full implementation of Standard ML"
 HOMEPAGE="https://www.polyml.org/"
@@ -32,21 +32,25 @@ src_prepare() {
 }
 
 src_configure() {
-	local x=(
+	lto-guarantee-fat
+
+	local myconf=(
+		--enable-shared
+		--with-pic=pic-only
 		$(use_enable !portable native-codegeneration)
 		$(use_with gmp)
 	)
 
-	econf "${x[@]}"
+	econf "${myconf[@]}"
 }
 
 src_install() {
 	default
+	strip-lto-bytecode
 
 	if [[ -f "${ED}"/usr/$(get_libdir)/libpolymain.la ]] ; then
 		rm "${ED}"/usr/$(get_libdir)/libpolymain.la || die
 	fi
-
 	if [[ -f "${ED}"/usr/$(get_libdir)/libpolyml.la ]] ; then
 		rm "${ED}"/usr/$(get_libdir)/libpolyml.la || die
 	fi

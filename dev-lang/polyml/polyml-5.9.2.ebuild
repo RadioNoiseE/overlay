@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit flag-o-matic
+inherit autotools flag-o-matic
 
 DESCRIPTION="Poly/ML is a full implementation of Standard ML"
 HOMEPAGE="https://www.polyml.org/"
@@ -16,26 +16,22 @@ KEYWORDS="~amd64 ~arm64"
 IUSE="+gmp portable"
 
 RDEPEND="
-	gmp? ( >=dev-libs/gmp-5:= )
+	gmp? ( >=dev-libs/gmp-4:= )
 	portable? ( dev-libs/libffi:= )
 "
 
 DEPEND="${RDEPEND}"
 
-AR="ar"
-CC="gcc"
-CXX="g++"
-RANLIB="ranlib"
+src_prepare() {
+	default
 
-pkg_pretend() {
-	if has usersandbox ${FEATURES}; then
-		die "Poly/ML is incompatible with the usersandbox feature"
-	fi
+	# for compatibility with libc++
+	sed -i '/AC_CHECK_LIB(stdc++, main)/d' configure.ac || die
+
+	eautoreconf
 }
 
 src_configure() {
-	filter-flags '*'
-
 	local x=(
 		$(use_enable !portable native-codegeneration)
 		$(use_with gmp)
